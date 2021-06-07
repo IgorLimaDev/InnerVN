@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Titulo</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Plugin de efeito de escrita -->
+<script src="js/typed.js"></script>
+
+<!-- Engine do jogo, elementos básicos de controle -->
+<script src="js/vnEngine.js"></script>
+<script src="js/roadmap.js"></script>
+
+
+<style>
+</style>
+	  
+	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	  <script src="js/jquery.min.js"></script>
+	  
+<script>
+
+jQuery(document).ready(function() {
+	jQuery("body").on("keypress", function(e) {
+	// Captura evento de pressionamento da tecla Espaço e passa pra próxima fala
+	if(e.keyCode == 32 || e.keyCode == 13) {
+		jQuery(".speak-box").click();
+	}
+	});
+	$(window).resize(function() {
+		adjustHUD();
+	});
+	adjustHUD();
+	Roteiro();	
+});
+
+/* Função que declara o roteiro (estrutura) e inicia o jogo */
+
+/* --------------------	*/
+		
+		
+/* -------------- Funções e métodos do sistema do jogo -------------- */
+		
+	
+
+/* -------------- Término das variáveis globais para valores e controles -------------- */
+	
+	  </script>
+  </head>
+  <body>
+	
+	<div class="game-frame">
+		<img class="image-background"/>
+		<div class="responsive-overlay">
+			<div class="overlay-choice-box">
+				<div class="choice-box">
+					<div class="question-title"></div>
+					<div class="options"></div>
+				</div>
+			</div>
+			<div class="center-character-scene"></div>
+			<div class="left-character-scene"></div>
+			<div class="right-character-scene"></div>
+			<div class="speak-box">
+			</div>
+			<div class="next-speak">&raquo;</div>
+		</div>	
+	</div>
+	
+  </body>
+</html>
